@@ -17,6 +17,7 @@ public class Main {
         final ServletContextHandler context = new ServletContextHandler();
         context.addServlet(new ServletHolder(new UnitTestRunner()), "/runUnitTests");
         context.addServlet(new ServletHolder(new IntegrationTestRunner(injector)),"/runIntegrationTests");
+        context.addServlet(new ServletHolder(injector.getInstance(MainAppHandler.class)),"/main");
 
         server.setHandler(context);
         try {
