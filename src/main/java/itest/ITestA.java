@@ -16,6 +16,6 @@ public class ITestA {
 
     @Test
     public void testA(){
-        Assert.assertEquals(valueField, "b");
+        Assert.assertEquals("b", valueField);
     }
 }
